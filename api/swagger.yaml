@@ -246,6 +246,8 @@ components:
             type: integer
             format: byte
           description: Weird format from Microsoft. The first three components of the UUID are little-endian, and the last two are big-endian.
+          maxLength: 16
+          minLength: 16
           example: [1, 2, 3]
         decimal:
           type: string

@@ -160,8 +160,6 @@ servers:
 # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
     url: https://virtserver.swaggerhub.com/valericus/uuid.im/0.1
-  - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/valericus/uuid.me/0.1
 
 components:
   schemas:

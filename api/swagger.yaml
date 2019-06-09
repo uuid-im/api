@@ -62,7 +62,7 @@ paths:
             of the server will be used.
           schema:
             type: string
-            pattern: '([0-9A-Fa-f]{2}:){6}[0-9A-Fa-f]{2}'
+            pattern: '([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}'
             example: 'b4:2e:99:28:c8:d6'
       responses:
         200:

@@ -157,6 +157,9 @@ paths:
   
 
 servers:
+# Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/valericus/uuid.im/0.1
   - description: SwaggerHub API Auto Mocking
     url: https://virtserver.swaggerhub.com/valericus/uuid.me/0.1
 
@@ -213,7 +216,7 @@ components:
             [section 3](https://tools.ietf.org/html/rfc4122#section-3) 
             of RFC 4122
 
-    UUID:
+    Uuid:
       type: object
       required:
         - variant
@@ -221,7 +224,7 @@ components:
         - rfc4122
         - littleEndian
         - mixedEndian
-        - deciaml
+        - decimal
         - binary
       properties:
         variant:
@@ -236,6 +239,8 @@ components:
             type: integer
             format: byte
           description: Little endian ordered bytes of UUID as array of integers
+          maxLength: 16
+          minLength: 16
           example: [1, 2, 3]
         mixedEndian:
           type: array
@@ -296,12 +301,9 @@ components:
     Success:
       description: Successful result
       content:
-        text/plain:
-          schema:
-            $ref: '#/components/schemas/UUIDString'
         application/json:
           schema:
-            $ref: '#/components/schemas/UUID'
+            $ref: '#/components/schemas/Uuid'
 
     BadRequest:
       description: Request contains bad values or is malformed
